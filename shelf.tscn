@@ -1,0 +1,149 @@
+[gd_scene load_steps=15 format=3 uid="uid://bd6di48rgogwu"]
+
+[ext_resource type="Texture2D" uid="uid://op6l3kpwayyb" path="res://backgrounds/shelf1.png" id="1_7kvds"]
+[ext_resource type="Script" path="res://scripts/shelf.gd" id="1_jluod"]
+[ext_resource type="Texture2D" uid="uid://bvod82wxgsce7" path="res://assets/book1.PNG" id="2_jhj4k"]
+[ext_resource type="Texture2D" uid="uid://dkevyc3vmbbdk" path="res://assets/book2.PNG" id="3_qbutf"]
+[ext_resource type="Texture2D" uid="uid://brklbji5kc7yp" path="res://assets/book3.PNG" id="4_foi2r"]
+[ext_resource type="Script" path="res://scripts/moveBook.gd" id="4_imbs2"]
+[ext_resource type="Texture2D" uid="uid://dem5eslicn63d" path="res://assets/book4.PNG" id="5_00hn4"]
+[ext_resource type="Texture2D" uid="uid://bupcjrq2rw5pk" path="res://assets/book5.PNG" id="6_v34rt"]
+[ext_resource type="Texture2D" uid="uid://b0f3nhbnjdoxc" path="res://assets/book6.PNG" id="7_tiu30"]
+[ext_resource type="Texture2D" uid="uid://c2a5hb686483u" path="res://assets/book7.PNG" id="8_bjv17"]
+[ext_resource type="Texture2D" uid="uid://dpcdvuewcm1p4" path="res://assets/book8.PNG" id="9_o8q0p"]
+[ext_resource type="Texture2D" uid="uid://cmiq2s0y3tknb" path="res://assets/cam.PNG" id="10_prs4s"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="12_ll8mi"]
+[ext_resource type="Texture2D" uid="uid://cfgfdrjfu0700" path="res://assets/etching.PNG" id="13_klkcd"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_jluod")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1288.0
+offset_bottom = 732.0
+texture = ExtResource("1_7kvds")
+
+[node name="Book1" type="Sprite2D" parent="."]
+position = Vector2(834, 558)
+texture = ExtResource("2_jhj4k")
+script = ExtResource("4_imbs2")
+
+[node name="book1btn" type="Button" parent="Book1"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -63.0
+offset_top = -244.0
+offset_right = 66.0
+offset_bottom = 248.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Book2" type="Sprite2D" parent="."]
+position = Vector2(948, 613)
+texture = ExtResource("3_qbutf")
+
+[node name="book2btn" type="Button" parent="Book2"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -51.0
+offset_top = -168.0
+offset_right = 39.0
+offset_bottom = 187.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Book3" type="Sprite2D" parent="."]
+position = Vector2(1029, 570)
+texture = ExtResource("4_foi2r")
+
+[node name="book3btn" type="Button" parent="Book3"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -44.0
+offset_top = -219.0
+offset_right = 40.0
+offset_bottom = 220.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Book4" type="Sprite2D" parent="."]
+position = Vector2(1145, 552)
+texture = ExtResource("5_00hn4")
+
+[node name="book4btn" type="Button" parent="Book4"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -69.0
+offset_top = -240.0
+offset_right = 69.0
+offset_bottom = 240.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Book5" type="Sprite2D" parent="."]
+position = Vector2(1322, 584)
+texture = ExtResource("6_v34rt")
+
+[node name="book5btn" type="Button" parent="Book5"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -110.0
+offset_top = -175.0
+offset_right = 105.0
+offset_bottom = 205.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Book6" type="Sprite2D" parent="."]
+position = Vector2(1487, 537)
+texture = ExtResource("7_tiu30")
+
+[node name="book6btn" type="Button" parent="Book6"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -55.0
+offset_top = -240.0
+offset_right = 55.0
+offset_bottom = 260.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Book7" type="Sprite2D" parent="."]
+position = Vector2(1607, 531)
+texture = ExtResource("8_bjv17")
+
+[node name="book7btn" type="Button" parent="Book7"]
+modulate = Color(1, 1, 0.447059, 0)
+offset_left = -54.0
+offset_top = -253.0
+offset_right = 46.0
+offset_bottom = 264.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Book8" type="Sprite2D" parent="."]
+position = Vector2(1747, 550)
+texture = ExtResource("9_o8q0p")
+
+[node name="book8btn" type="Button" parent="Book8"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -82.0
+offset_top = -227.0
+offset_right = 81.0
+offset_bottom = 230.0
+metadata/_edit_use_anchors_ = true
+
+[node name="cam" type="Sprite2D" parent="."]
+position = Vector2(376, 584)
+texture = ExtResource("10_prs4s")
+
+[node name="cambtn" type="Button" parent="cam"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -152.0
+offset_top = -237.0
+offset_right = 135.0
+offset_bottom = 227.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Etching" type="Sprite2D" parent="."]
+position = Vector2(1861, 520)
+texture = ExtResource("13_klkcd")
+
+[node name="main" parent="." instance=ExtResource("12_ll8mi")]
+
+[connection signal="pressed" from="Book1/book1btn" to="Book1" method="_on_book_1_btn_pressed"]
+[connection signal="pressed" from="Book2/book2btn" to="Book1" method="_on_book_2_btn_pressed"]
+[connection signal="pressed" from="Book3/book3btn" to="Book1" method="_on_book_3_btn_pressed"]
+[connection signal="pressed" from="Book4/book4btn" to="Book1" method="_on_book_4_btn_pressed"]
+[connection signal="pressed" from="Book5/book5btn" to="Book1" method="_on_book_5_btn_pressed"]
+[connection signal="pressed" from="Book6/book6btn" to="Book1" method="_on_book_6_btn_pressed"]
+[connection signal="pressed" from="Book7/book7btn" to="Book1" method="_on_book_7_btn_pressed"]
+[connection signal="pressed" from="Book8/book8btn" to="Book1" method="_on_book_8_btn_pressed"]
+[connection signal="pressed" from="cam/cambtn" to="." method="_on_cambtn_pressed"]

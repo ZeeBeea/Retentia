@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://bgshebsvjqvxr"]
+
+[ext_resource type="Script" path="res://scripts/mirrorBedroom.gd" id="1_g3rl7"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="2_7algi"]
+[ext_resource type="Texture2D" uid="uid://cmuw32rpi1gyl" path="res://backgrounds/mirrorwall.PNG" id="2_ymbs0"]
+[ext_resource type="Texture2D" uid="uid://c5wlgj7a3yb22" path="res://assets/chestclosed.PNG" id="3_fkse8"]
+[ext_resource type="Texture2D" uid="uid://bgorepqbpugwu" path="res://assets/knife.png" id="4_jvemb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_g3rl7")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1288.0
+offset_bottom = 731.0
+texture = ExtResource("2_ymbs0")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_right = 1290.0
+offset_bottom = 732.0
+texture = ExtResource("3_fkse8")
+
+[node name="chest" type="Button" parent="TextureRect/TextureRect"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 661.0
+offset_right = 1629.0
+offset_bottom = 1000.0
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect"]
+clip_contents = true
+layout_mode = 0
+offset_left = 462.0
+offset_top = 534.0
+offset_right = 694.0
+offset_bottom = 631.0
+texture = ExtResource("4_jvemb")
+
+[node name="knife" type="Button" parent="TextureRect/TextureRect2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 20.0
+offset_right = 228.0
+offset_bottom = 52.0
+
+[node name="mirror" type="Button" parent="TextureRect"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 433.0
+offset_top = 48.0
+offset_right = 778.0
+offset_bottom = 510.0
+
+[node name="main" parent="." instance=ExtResource("2_7algi")]
+
+[connection signal="pressed" from="TextureRect/TextureRect/chest" to="." method="_on_chest_pressed"]
+[connection signal="pressed" from="TextureRect/TextureRect2/knife" to="." method="_on_knife_pressed"]
+[connection signal="pressed" from="TextureRect/mirror" to="." method="_on_mirror_pressed"]

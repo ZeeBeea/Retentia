@@ -1,0 +1,165 @@
+[gd_scene load_steps=19 format=3 uid="uid://dtdnx82sk3rax"]
+
+[ext_resource type="Script" path="res://scripts/firePlaceWall.gd" id="1_4jbtx"]
+[ext_resource type="Texture2D" uid="uid://ccfw6rar83dpv" path="res://assets/wall1.PNG" id="2_os1r4"]
+[ext_resource type="Texture2D" uid="uid://c3kd4lcdbib2a" path="res://assets/fireplaceempt.PNG" id="3_4cygt"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="3_bw07n"]
+[ext_resource type="Texture2D" uid="uid://bwm042lj37rx6" path="res://assets/grate.PNG" id="4_t241v"]
+[ext_resource type="Texture2D" uid="uid://bevkpvjp8rjxq" path="res://assets/light1.PNG" id="4_vehwj"]
+[ext_resource type="Texture2D" uid="uid://bo5ar0av1r2bf" path="res://assets/shelfs.PNG" id="5_a2ix4"]
+[ext_resource type="Texture2D" uid="uid://xtps3irinjr0" path="res://assets/light2.PNG" id="5_gat7c"]
+[ext_resource type="Texture2D" uid="uid://d3e8c56lm30rk" path="res://assets/fire1.PNG" id="6_4vuue"]
+[ext_resource type="Texture2D" uid="uid://c4t3o0v0q7uwl" path="res://assets/firewood.PNG" id="7_i7bxv"]
+[ext_resource type="Texture2D" uid="uid://6rjrvq3rpywl" path="res://assets/fire2.PNG" id="7_iyhja"]
+[ext_resource type="Texture2D" uid="uid://cmiq2s0y3tknb" path="res://assets/cam.PNG" id="7_n06um"]
+[ext_resource type="Texture2D" uid="uid://d30k33wseiujs" path="res://assets/fire3.PNG" id="8_14akq"]
+[ext_resource type="Texture2D" uid="uid://ddce6cxw2lrjg" path="res://assets/fire4.PNG" id="9_2404e"]
+[ext_resource type="Texture2D" uid="uid://dobjt8h8io5iw" path="res://assets/purfume.PNG" id="15_fka0d"]
+[ext_resource type="Texture2D" uid="uid://by310dqhi66ch" path="res://assets/statue.PNG" id="16_2vg1k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ed6m0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_vehwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gat7c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vcid6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4vuue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iyhja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_14akq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2404e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_4jbtx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1370.0
+offset_bottom = 720.0
+texture = ExtResource("2_os1r4")
+
+[node name="FirePlace" type="Sprite2D" parent="."]
+position = Vector2(1025, 526)
+texture = ExtResource("3_4cygt")
+
+[node name="fireplaceBtn" type="Button" parent="FirePlace"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -845.0
+offset_top = -86.0
+offset_right = -8.0
+offset_bottom = 492.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="FirePlace"]
+visible = false
+position = Vector2(-458, 220)
+sprite_frames = SubResource("SpriteFrames_ed6m0")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="FirePlace"]
+visible = false
+position = Vector2(-450, 251)
+sprite_frames = SubResource("SpriteFrames_vcid6")
+
+[node name="Grate" type="Sprite2D" parent="."]
+position = Vector2(1376, 535)
+texture = ExtResource("4_t241v")
+
+[node name="Shelfs" type="Sprite2D" parent="."]
+position = Vector2(1400, 533)
+texture = ExtResource("5_a2ix4")
+
+[node name="shelf1" type="Button" parent="Shelfs"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -294.0
+offset_top = -458.0
+offset_right = 301.0
+offset_bottom = -227.0
+metadata/_edit_use_anchors_ = true
+
+[node name="shelf2" type="Button" parent="Shelfs"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -222.0
+offset_top = -199.0
+offset_right = 275.0
+offset_bottom = -33.0
+
+[node name="shelf3" type="Button" parent="Shelfs"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -277.0
+offset_top = -15.0
+offset_right = 304.0
+offset_bottom = 167.0
+
+[node name="Firewood" type="Sprite2D" parent="."]
+position = Vector2(1067, 822)
+texture = ExtResource("7_i7bxv")
+
+[node name="firebtn" type="Button" parent="Firewood"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 57.0
+offset_top = -77.0001
+offset_right = 456.0
+offset_bottom = 44.9999
+
+[node name="Cam" type="Sprite2D" parent="."]
+position = Vector2(1207, 216)
+scale = Vector2(0.30919, 0.30919)
+texture = ExtResource("7_n06um")
+
+[node name="Purfume" type="Sprite2D" parent="."]
+position = Vector2(377, 356)
+texture = ExtResource("15_fka0d")
+
+[node name="purfumeBtn" type="Button" parent="Purfume"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -60.0
+offset_top = -62.0
+offset_right = 59.0
+offset_bottom = 58.0
+
+[node name="Statue" type="Sprite2D" parent="."]
+position = Vector2(786, 350)
+texture = ExtResource("16_2vg1k")
+
+[node name="Button" type="Button" parent="Statue"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -55.0
+offset_top = -97.0
+offset_right = 60.0
+offset_bottom = 85.0
+
+[node name="Grate2" type="Sprite2D" parent="."]
+position = Vector2(553, 867)
+texture = ExtResource("4_t241v")
+
+[node name="main" parent="." instance=ExtResource("3_bw07n")]
+
+[connection signal="pressed" from="FirePlace/fireplaceBtn" to="." method="_on_firePlacebtn_pressed"]
+[connection signal="pressed" from="Shelfs/shelf1" to="." method="_on_shelf_1_pressed"]
+[connection signal="pressed" from="Shelfs/shelf2" to="." method="_on_shelf_2_pressed"]
+[connection signal="pressed" from="Shelfs/shelf3" to="." method="_on_shelf_3_pressed"]
+[connection signal="pressed" from="Firewood/firebtn" to="." method="_on_firebtn_pressed"]
+[connection signal="pressed" from="Purfume/purfumeBtn" to="." method="_on_purfume_btn_pressed"]
+[connection signal="pressed" from="Statue/Button" to="." method="_on_statue_pressed"]

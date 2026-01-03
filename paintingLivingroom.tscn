@@ -1,0 +1,218 @@
+[gd_scene load_steps=25 format=3 uid="uid://o7ukscdbi7rn"]
+
+[ext_resource type="Script" path="res://paintingLivingroom.gd" id="1_pra2n"]
+[ext_resource type="Texture2D" uid="uid://b83alxx66vsf3" path="res://livingroom/paintingWall/wall.PNG" id="1_yoabo"]
+[ext_resource type="Texture2D" uid="uid://brh45f6geam38" path="res://livingroom/paintingWall/paintingWallLivingRoom.PNG" id="2_lokt8"]
+[ext_resource type="Texture2D" uid="uid://tvxe8w8dxlj7" path="res://livingroom/paintingWall/painting/Paint Layer 5.PNG" id="3_er884"]
+[ext_resource type="Texture2D" uid="uid://d1j5stmbv7ruk" path="res://livingroom/paintingWall/painting/blue.PNG" id="4_4mr4a"]
+[ext_resource type="Texture2D" uid="uid://dc4eyb4tsukd4" path="res://livingroom/paintingWall/painting/black.PNG" id="5_82a3m"]
+[ext_resource type="Texture2D" uid="uid://dgvuu7rdislt8" path="res://livingroom/paintingWall/painting/white.PNG" id="6_g3t07"]
+[ext_resource type="Texture2D" uid="uid://bcrapvikro2wc" path="res://livingroom/paintingWall/painting/gree.PNG" id="7_t5yy1"]
+[ext_resource type="Texture2D" uid="uid://bolm56o7xqtqn" path="res://livingroom/paintingWall/painting/red.PNG" id="8_siecw"]
+[ext_resource type="Texture2D" uid="uid://bmdd7rw7huymj" path="res://livingroom/paintingWall/painting/yellow.PNG" id="9_80yls"]
+[ext_resource type="Texture2D" uid="uid://bre5nblsrjvqe" path="res://livingroom/paintingWall/pallet.PNG" id="10_7g33k"]
+[ext_resource type="Texture2D" uid="uid://p6di1l0rpij5" path="res://livingroom/paintingWall/yellpw.PNG" id="11_g8gkb"]
+[ext_resource type="Texture2D" uid="uid://bpx1lxmcsnyaq" path="res://livingroom/paintingWall/white.PNG" id="12_2w4ns"]
+[ext_resource type="Texture2D" uid="uid://ch0avgc6t8sw3" path="res://livingroom/paintingWall/red.PNG" id="13_ii6k2"]
+[ext_resource type="Texture2D" uid="uid://b4funjkr5dk3n" path="res://livingroom/paintingWall/green.PNG" id="14_4wk02"]
+[ext_resource type="Texture2D" uid="uid://m67u5d2orwgi" path="res://livingroom/paintingWall/blue.PNG" id="15_v21on"]
+[ext_resource type="Texture2D" uid="uid://cser5l278vq0i" path="res://livingroom/paintingWall/black.PNG" id="16_2rniu"]
+[ext_resource type="Texture2D" uid="uid://m0pn6vb45u2y" path="res://livingroom/paintingWall/spoon.PNG" id="17_bicgk"]
+[ext_resource type="Texture2D" uid="uid://cbqp8fyeo086p" path="res://livingroom/paintingWall/sunflower.PNG" id="18_gglup"]
+[ext_resource type="Texture2D" uid="uid://b3yfrqd70nr46" path="res://livingroom/paintingWall/bluebell.PNG" id="19_a4rjv"]
+[ext_resource type="Texture2D" uid="uid://77nhuiwgaw4d" path="res://livingroom/paintingWall/candle.PNG" id="20_0xktc"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="21_uvoxv"]
+[ext_resource type="Texture2D" uid="uid://d02kqypwgrukd" path="res://livingroom/paintingWall/flame.PNG" id="22_l5keg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8hyji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_l5keg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pra2n")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_yoabo")
+
+[node name="PaintingWallLivingRoom" type="Sprite2D" parent="."]
+position = Vector2(964, 535)
+texture = ExtResource("2_lokt8")
+
+[node name="paintingButton" type="Button" parent="PaintingWallLivingRoom"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -655.0
+offset_top = -265.0
+offset_right = 134.0
+offset_bottom = 109.0
+
+[node name="PaintLayer5" type="Sprite2D" parent="PaintingWallLivingRoom"]
+visible = false
+position = Vector2(-255, -70)
+texture = ExtResource("3_er884")
+
+[node name="Blue2" type="Sprite2D" parent="PaintingWallLivingRoom/PaintLayer5"]
+visible = false
+position = Vector2(4, 9)
+texture = ExtResource("4_4mr4a")
+
+[node name="Black2" type="Sprite2D" parent="PaintingWallLivingRoom/PaintLayer5"]
+visible = false
+position = Vector2(4, 9)
+texture = ExtResource("5_82a3m")
+
+[node name="White2" type="Sprite2D" parent="PaintingWallLivingRoom/PaintLayer5"]
+visible = false
+position = Vector2(35, 7)
+texture = ExtResource("6_g3t07")
+
+[node name="Gree" type="Sprite2D" parent="PaintingWallLivingRoom/PaintLayer5"]
+visible = false
+position = Vector2(4, 4)
+texture = ExtResource("7_t5yy1")
+
+[node name="Red2" type="Sprite2D" parent="PaintingWallLivingRoom/PaintLayer5"]
+visible = false
+position = Vector2(11, 61)
+texture = ExtResource("8_siecw")
+
+[node name="Yellow" type="Sprite2D" parent="PaintingWallLivingRoom/PaintLayer5"]
+visible = false
+position = Vector2(-169, 1)
+texture = ExtResource("9_80yls")
+
+[node name="Pallet" type="Sprite2D" parent="PaintingWallLivingRoom"]
+position = Vector2(67, 51)
+texture = ExtResource("10_7g33k")
+
+[node name="Button" type="Button" parent="PaintingWallLivingRoom/Pallet"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -108.0
+offset_top = -85.0
+offset_right = 96.0
+offset_bottom = 100.0
+
+[node name="Yellpw" type="Sprite2D" parent="PaintingWallLivingRoom/Pallet"]
+position = Vector2(60, -4)
+texture = ExtResource("11_g8gkb")
+
+[node name="Button" type="Button" parent="PaintingWallLivingRoom/Pallet/Yellpw"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -17.0
+offset_top = -16.0
+offset_right = 19.0
+offset_bottom = 18.0
+
+[node name="White" type="Sprite2D" parent="PaintingWallLivingRoom/Pallet"]
+position = Vector2(-27, -46)
+texture = ExtResource("12_2w4ns")
+
+[node name="Button" type="Button" parent="PaintingWallLivingRoom/Pallet/White"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -19.0
+offset_top = -17.0
+offset_right = 17.0
+offset_bottom = 17.0
+
+[node name="Red" type="Sprite2D" parent="PaintingWallLivingRoom/Pallet"]
+position = Vector2(26, -46)
+texture = ExtResource("13_ii6k2")
+
+[node name="Button" type="Button" parent="PaintingWallLivingRoom/Pallet/Red"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -17.0
+offset_top = -19.0
+offset_right = 19.0
+offset_bottom = 17.0
+
+[node name="Green" type="Sprite2D" parent="PaintingWallLivingRoom/Pallet"]
+position = Vector2(53, 45)
+texture = ExtResource("14_4wk02")
+
+[node name="Button" type="Button" parent="PaintingWallLivingRoom/Pallet/Green"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -18.0
+offset_top = -18.0
+offset_right = 18.0
+offset_bottom = 16.0
+
+[node name="Blue" type="Sprite2D" parent="PaintingWallLivingRoom/Pallet"]
+position = Vector2(-34, 32)
+texture = ExtResource("15_v21on")
+
+[node name="Button" type="Button" parent="PaintingWallLivingRoom/Pallet/Blue"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -23.0
+offset_top = -18.0
+offset_right = 24.0
+offset_bottom = 18.0
+
+[node name="Black" type="Sprite2D" parent="PaintingWallLivingRoom/Pallet"]
+position = Vector2(13, 13)
+texture = ExtResource("16_2rniu")
+
+[node name="Button" type="Button" parent="PaintingWallLivingRoom/Pallet/Black"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -17.0
+offset_top = -16.0
+offset_right = 19.0
+offset_bottom = 18.0
+
+[node name="Spoon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1521, 461)
+texture = ExtResource("17_bicgk")
+
+[node name="Sunflower" type="Sprite2D" parent="."]
+position = Vector2(1247, 366)
+texture = ExtResource("18_gglup")
+
+[node name="sunflowerbtn" type="Button" parent="Sunflower"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -65.0
+offset_top = -84.0
+offset_right = 66.0
+offset_bottom = 48.0
+
+[node name="Bluebell" type="Sprite2D" parent="."]
+position = Vector2(1355, 400)
+texture = ExtResource("19_a4rjv")
+
+[node name="bluebellbtn" type="Button" parent="Bluebell"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -48.0
+offset_top = -67.0
+offset_right = 68.0
+offset_bottom = 26.0
+
+[node name="Candle" type="Sprite2D" parent="."]
+position = Vector2(1474, 554)
+texture = ExtResource("20_0xktc")
+
+[node name="flame" type="AnimatedSprite2D" parent="Candle"]
+visible = false
+position = Vector2(6.00004, -94)
+sprite_frames = SubResource("SpriteFrames_8hyji")
+
+[node name="candlebtn" type="Button" parent="Candle"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -30.0
+offset_top = -86.0
+offset_right = 37.0
+offset_bottom = 70.0
+
+[node name="main" parent="." instance=ExtResource("21_uvoxv")]
+
+[connection signal="pressed" from="PaintingWallLivingRoom/paintingButton" to="." method="_on_painting_button_pressed"]
+[connection signal="pressed" from="PaintingWallLivingRoom/Pallet/Button" to="." method="_on_pallet_pressed"]
+[connection signal="pressed" from="Sunflower/sunflowerbtn" to="." method="_on_sunflowerbtn_pressed"]
+[connection signal="pressed" from="Bluebell/bluebellbtn" to="." method="_on_bluebellbtn_pressed"]
+[connection signal="pressed" from="Candle/candlebtn" to="." method="_on_candlebtn_pressed"]

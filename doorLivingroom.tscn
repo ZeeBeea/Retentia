@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://dfnd4dvv7p543"]
+
+[ext_resource type="Texture2D" uid="uid://cpe2fp3wl5d16" path="res://livingroom/doorWall/doorWallLivingRoom.PNG" id="1_3pjbt"]
+[ext_resource type="Script" path="res://doorLivingroom.gd" id="1_fwo6u"]
+[ext_resource type="Texture2D" uid="uid://bqhwe7wihwhro" path="res://livingroom/doorWall/canvas.PNG" id="2_oyk4v"]
+[ext_resource type="Texture2D" uid="uid://d3wiofeu247lb" path="res://livingroom/doorWall/box.PNG" id="3_7bv58"]
+[ext_resource type="Texture2D" uid="uid://daccfkvybhuvq" path="res://livingroom/doorWall/Paint Layer 6.PNG" id="4_b7xbj"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="5_r8s0r"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fwo6u")
+
+[node name="wall" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_3pjbt")
+
+[node name="canvas" type="TextureRect" parent="wall"]
+layout_mode = 0
+offset_left = 1289.0
+offset_top = 388.0
+offset_right = 1775.0
+offset_bottom = 1015.0
+texture = ExtResource("2_oyk4v")
+
+[node name="Button" type="Button" parent="wall/canvas"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 365.0
+offset_bottom = 589.0
+
+[node name="box" type="TextureRect" parent="wall"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 533.0
+offset_right = 774.0
+offset_bottom = 1049.0
+texture = ExtResource("3_7bv58")
+
+[node name="Button" type="Button" parent="wall/box"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -9.0
+offset_top = 251.0
+offset_right = 401.0
+offset_bottom = 502.0
+
+[node name="door" type="Button" parent="wall"]
+modulate = Color(0, 0, 0, 0)
+layout_mode = 0
+offset_left = 759.0
+offset_top = 204.0
+offset_right = 1146.0
+offset_bottom = 890.0
+
+[node name="extra3dness" type="Sprite2D" parent="."]
+position = Vector2(957, 842)
+texture = ExtResource("4_b7xbj")
+
+[node name="main" parent="." instance=ExtResource("5_r8s0r")]
+
+[connection signal="pressed" from="wall/canvas/Button" to="." method="_on_canvas_pressed"]
+[connection signal="pressed" from="wall/box/Button" to="." method="_on_box_pressed"]
+[connection signal="pressed" from="wall/door" to="." method="_on_door_pressed"]

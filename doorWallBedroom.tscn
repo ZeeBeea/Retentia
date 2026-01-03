@@ -1,0 +1,162 @@
+[gd_scene load_steps=16 format=3 uid="uid://by6eyohshx8wl"]
+
+[ext_resource type="Script" path="res://scripts/doorWallBedroom.gd" id="1_em0a2"]
+[ext_resource type="Texture2D" uid="uid://bcebqirxvebxp" path="res://backgrounds/doorbg.JPEG" id="1_yi20v"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="3_hdd7h"]
+[ext_resource type="Texture2D" uid="uid://bljog1jgvbv20" path="res://assets/boxClosed.PNG" id="3_id8fu"]
+[ext_resource type="Texture2D" uid="uid://p6w3uwu6qoou" path="res://assets/boxOpen.PNG" id="4_72xss"]
+[ext_resource type="Texture2D" uid="uid://bsdpqlsiiejdt" path="res://assets/hallway.PNG" id="4_88b5d"]
+[ext_resource type="Texture2D" uid="uid://djmevebc0br86" path="res://assets/bon.PNG" id="5_t31nq"]
+[ext_resource type="Texture2D" uid="uid://ch3280ktrtq2y" path="res://assets/litchestOpen.PNG" id="5_tuanf"]
+[ext_resource type="Texture2D" uid="uid://b1ljcx5k1d3u6" path="res://assets/mouse.PNG" id="6_5d8xe"]
+[ext_resource type="Texture2D" uid="uid://bmyuttm28tr5i" path="res://assets/meriindoor.PNG" id="6_s7f6w"]
+[ext_resource type="Texture2D" uid="uid://76f0ffb7ewml" path="res://assets/candleChest2.PNG" id="7_oa657"]
+[ext_resource type="Texture2D" uid="uid://cn7vujyp6ylfi" path="res://assets/candleChest3.PNG" id="8_rsqxr"]
+[ext_resource type="Texture2D" uid="uid://c132d3b6iuxr5" path="res://assets/candleChest.PNG" id="9_rdclg"]
+[ext_resource type="Texture2D" uid="uid://c3v1jjnhhfh1q" path="res://assets/candleJewlery.PNG" id="10_auqh7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_awsyl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_rdclg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rsqxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oa657")
+}],
+"loop": true,
+"name": &"lit",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_em0a2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -511.0
+offset_top = -208.0
+offset_right = 2097.0
+offset_bottom = 1316.0
+texture = ExtResource("1_yi20v")
+
+[node name="picbtn" type="Button" parent="TextureRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 832.0
+offset_top = 375.0
+offset_right = 1460.0
+offset_bottom = 832.0
+
+[node name="box" type="TextureRect" parent="."]
+offset_left = 329.0
+offset_top = 469.0
+offset_right = 905.0
+offset_bottom = 1060.0
+texture = ExtResource("3_id8fu")
+
+[node name="boxopen" type="TextureRect" parent="box"]
+visible = false
+layout_mode = 0
+offset_left = -158.0
+offset_right = 669.0
+offset_bottom = 643.0
+texture = ExtResource("4_72xss")
+
+[node name="bg" type="TextureRect" parent="box/boxopen"]
+visible = false
+layout_mode = 0
+offset_left = 216.0
+offset_top = 321.0
+offset_right = 675.0
+offset_bottom = 544.0
+texture = ExtResource("5_tuanf")
+
+[node name="mouse" type="TextureRect" parent="box/boxopen/bg"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 109.0
+offset_right = 233.0
+offset_bottom = 188.0
+texture = ExtResource("6_5d8xe")
+
+[node name="candle" type="AnimatedSprite2D" parent="box/boxopen/bg"]
+visible = false
+position = Vector2(360, 115)
+scale = Vector2(1.24468, 1.24468)
+sprite_frames = SubResource("SpriteFrames_awsyl")
+animation = &"lit"
+frame_progress = 0.806078
+
+[node name="unlitCandle" type="TextureRect" parent="box/boxopen"]
+visible = false
+layout_mode = 0
+offset_left = 545.0
+offset_top = 389.0
+offset_right = 605.0
+offset_bottom = 522.0
+texture = ExtResource("10_auqh7")
+expand_mode = 1
+
+[node name="chessbtn" type="Button" parent="box"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.126736
+anchor_top = -0.18898
+anchor_right = -0.126736
+anchor_bottom = -0.18898
+offset_left = 87.9999
+offset_top = 412.687
+offset_right = 589.0
+offset_bottom = 709.688
+
+[node name="mouseBtn" type="Button" parent="box"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 100.0
+offset_top = 430.0
+offset_right = 288.0
+offset_bottom = 511.0
+
+[node name="hallway" type="TextureRect" parent="."]
+visible = false
+offset_left = 1138.0
+offset_top = 191.0
+offset_right = 1635.0
+offset_bottom = 950.0
+texture = ExtResource("4_88b5d")
+
+[node name="bon" type="TextureRect" parent="hallway"]
+visible = false
+layout_mode = 0
+offset_left = 125.0
+offset_top = 134.0
+offset_right = 422.0
+offset_bottom = 767.0
+texture = ExtResource("5_t31nq")
+
+[node name="meri" type="TextureRect" parent="hallway"]
+visible = false
+layout_mode = 0
+offset_left = 125.0
+offset_top = 149.0
+offset_right = 417.0
+offset_bottom = 782.0
+texture = ExtResource("6_s7f6w")
+
+[node name="doorbtn" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1165.0
+offset_top = 192.0
+offset_right = 1637.0
+offset_bottom = 945.0
+
+[node name="main" parent="." instance=ExtResource("3_hdd7h")]
+
+[connection signal="pressed" from="box/chessbtn" to="." method="_on_chessbtn_pressed"]
+[connection signal="pressed" from="box/mouseBtn" to="." method="_on_mouse_btn_pressed"]
+[connection signal="pressed" from="doorbtn" to="." method="_onDoorPressed"]

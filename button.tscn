@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://g6avsg2g385v"]
+
+[ext_resource type="Texture2D" uid="uid://w8bdcfc8ycpg" path="res://assets/jewlerybox/butup.PNG" id="1_j72m1"]
+
+[node name="Button" type="Button"]
+custom_minimum_size = Vector2(61, 57)
+offset_left = 1.0
+offset_right = 62.0
+offset_bottom = 57.0
+flat = true
+
+[node name="Butup" type="Sprite2D" parent="."]
+position = Vector2(34, 29)
+texture = ExtResource("1_j72m1")

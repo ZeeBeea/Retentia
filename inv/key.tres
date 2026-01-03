@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InvObject" load_steps=3 format=3 uid="uid://cgfnpijfs2cdc"]
+
+[ext_resource type="Script" path="res://inv/objectInfo.gd" id="1_m1b8o"]
+[ext_resource type="Texture2D" uid="uid://cv843delooxgi" path="res://assets/key.PNG" id="2_xem8o"]
+
+[resource]
+script = ExtResource("1_m1b8o")
+name = "key"
+texture = ExtResource("2_xem8o")

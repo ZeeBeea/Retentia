@@ -1,0 +1,134 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctdturmftxxx3"]
+
+[ext_resource type="Texture2D" uid="uid://b1h7n2xn3ov5c" path="res://UIFiles/caraDia.png" id="1_3u174"]
+[ext_resource type="Script" path="res://end.gd" id="1_u0e6m"]
+[ext_resource type="FontFile" uid="uid://p5sc35hddxrq" path="res://UIFiles/FanwoodText-Regular.ttf" id="2_mawdm"]
+[ext_resource type="Texture2D" uid="uid://bbpm6gwx43481" path="res://UIFiles/retentiaLogo.png" id="3_em4f0"]
+[ext_resource type="Texture2D" uid="uid://drnj88l5x2oma" path="res://assets/Cara.PNG" id="4_nkhfh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_raeqw"]
+bg_color = Color(0.454051, 0.518773, 0.270623, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[node name="end" type="ColorRect"]
+visible = false
+offset_right = 1922.0
+offset_bottom = 1086.0
+color = Color(0.0196078, 0.0235294, 0.0666667, 1)
+script = ExtResource("1_u0e6m")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 619.0
+offset_top = 30.0
+offset_right = 1879.0
+offset_bottom = 1057.0
+color = Color(0.376471, 0.411765, 0.25098, 1)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ColorRect"]
+layout_mode = 0
+offset_right = 1258.0
+offset_bottom = 1025.0
+texture = ExtResource("1_3u174")
+patch_margin_left = 100
+patch_margin_top = 100
+patch_margin_right = 100
+patch_margin_bottom = 100
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 82.0
+offset_right = 1277.0
+offset_bottom = 282.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mawdm")
+theme_override_font_sizes/font_size = 140
+text = "Thanks For Playing!"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 405.0
+offset_right = 1280.0
+offset_bottom = 540.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mawdm")
+theme_override_font_sizes/font_size = 100
+text = "Music: Elizabeth"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 280.0
+offset_right = 1277.0
+offset_bottom = 415.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mawdm")
+theme_override_font_sizes/font_size = 100
+text = "Game Creation: Elizabeth"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 541.0
+offset_right = 1277.0
+offset_bottom = 676.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mawdm")
+theme_override_font_sizes/font_size = 100
+text = "Sound Effects via Pixabay"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -561.0
+offset_top = -383.0
+offset_right = -240.0
+offset_bottom = -62.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("3_em4f0")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 388.0
+offset_top = 684.0
+offset_right = 1196.0
+offset_bottom = 932.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_mawdm")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/normal = SubResource("StyleBoxFlat_raeqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_raeqw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_raeqw")
+text = "Back To Title Screen"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="ColorRect/Button"]
+modulate = Color(0.328968, 0.555958, 0, 0.560784)
+layout_mode = 0
+offset_right = 788.0
+offset_bottom = 238.0
+texture = ExtResource("1_3u174")
+patch_margin_left = 90
+patch_margin_top = 90
+patch_margin_right = 90
+patch_margin_bottom = 90
+
+[node name="Cara" type="Sprite2D" parent="ColorRect"]
+position = Vector2(-241, 626)
+texture = ExtResource("4_nkhfh")
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]

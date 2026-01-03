@@ -1,0 +1,233 @@
+[gd_scene load_steps=11 format=3 uid="uid://bg12ds774kxpu"]
+
+[ext_resource type="Script" path="res://scripts/jewlerybox.gd" id="1_1t2iu"]
+[ext_resource type="Texture2D" uid="uid://op6l3kpwayyb" path="res://backgrounds/shelf1.png" id="1_61xh8"]
+[ext_resource type="Texture2D" uid="uid://8k6felsf782d" path="res://assets/jewlerybox/boxop.PNG" id="2_lwvjc"]
+[ext_resource type="Texture2D" uid="uid://bijiixf3yrmnt" path="res://assets/jewlerybox/openleft.PNG" id="3_od06r"]
+[ext_resource type="Texture2D" uid="uid://dlxj6brmqiwd2" path="res://assets/jewlerybox/openright.PNG" id="5_3jy6t"]
+[ext_resource type="Texture2D" uid="uid://w8bdcfc8ycpg" path="res://assets/jewlerybox/butup.PNG" id="5_gcb0m"]
+[ext_resource type="Texture2D" uid="uid://c3v1jjnhhfh1q" path="res://assets/candleJewlery.PNG" id="5_khb6n"]
+[ext_resource type="Texture2D" uid="uid://bpbtbpkw6pfxy" path="res://assets/makeup.PNG" id="6_un10h"]
+[ext_resource type="PackedScene" uid="uid://n3wrtpvgs813" path="res://main.tscn" id="7_446uy"]
+[ext_resource type="Texture2D" uid="uid://j6tujnyr0bm7" path="res://assets/match.PNG" id="8_h1470"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1t2iu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1284.0
+offset_bottom = 715.0
+texture = ExtResource("1_61xh8")
+
+[node name="Boxop" type="Sprite2D" parent="."]
+position = Vector2(996, 641)
+texture = ExtResource("2_lwvjc")
+
+[node name="Openleft" type="Sprite2D" parent="Boxop"]
+visible = false
+position = Vector2(-349, 7)
+texture = ExtResource("3_od06r")
+
+[node name="candle" type="TextureRect" parent="Boxop/Openleft"]
+offset_left = -15.0
+offset_top = -41.0
+offset_right = 116.0
+offset_bottom = 224.0
+texture = ExtResource("5_khb6n")
+
+[node name="candleBtn" type="Button" parent="Boxop/Openleft/candle"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = -2.0
+offset_right = 115.0
+offset_bottom = 248.0
+
+[node name="Openright" type="Sprite2D" parent="Boxop"]
+visible = false
+position = Vector2(330, -7)
+scale = Vector2(0.967058, 0.967058)
+texture = ExtResource("5_3jy6t")
+
+[node name="matches" type="TextureRect" parent="Boxop/Openright"]
+offset_left = -35.1582
+offset_top = 158.212
+offset_right = 99.8418
+offset_bottom = 243.212
+texture = ExtResource("8_h1470")
+expand_mode = 1
+
+[node name="matchesBtn" type="Button" parent="Boxop/Openright/matches"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 2.0
+offset_right = 136.0
+offset_bottom = 81.0
+
+[node name="makeup" type="TextureRect" parent="Boxop/Openright"]
+offset_left = -119.951
+offset_top = 214.051
+offset_right = 11.0486
+offset_bottom = 254.051
+texture = ExtResource("6_un10h")
+
+[node name="makeupBtn" type="Button" parent="Boxop/Openright/makeup"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -4.0
+offset_top = -1.0
+offset_right = 133.0
+offset_bottom = 39.0
+
+[node name="TextureRect3" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = -100.0
+offset_top = 93.0
+offset_right = -30.0
+offset_bottom = 152.0
+texture = ExtResource("5_gcb0m")
+
+[node name="Button" type="Button" parent="Boxop/TextureRect3"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 5.0
+offset_right = 60.0
+offset_bottom = 56.0
+
+[node name="TextureRect2" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = -34.4196
+offset_top = 93.0
+offset_right = 35.5804
+offset_bottom = 152.0
+texture = ExtResource("5_gcb0m")
+
+[node name="Button2" type="Button" parent="Boxop/TextureRect2"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 7.0
+offset_right = 62.0
+offset_bottom = 55.0
+flat = true
+
+[node name="TextureRect" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = 31.1599
+offset_top = 93.0
+offset_right = 101.16
+offset_bottom = 152.0
+texture = ExtResource("5_gcb0m")
+
+[node name="Button3" type="Button" parent="Boxop/TextureRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 62.0
+offset_bottom = 56.0
+flat = true
+
+[node name="TextureRect4" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = -100.0
+offset_top = 153.116
+offset_right = -30.0
+offset_bottom = 212.116
+texture = ExtResource("5_gcb0m")
+
+[node name="Button4" type="Button" parent="Boxop/TextureRect4"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 5.0
+offset_right = 60.0
+offset_bottom = 56.0
+flat = true
+
+[node name="TextureRect5" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = -34.4196
+offset_top = 153.116
+offset_right = 35.5804
+offset_bottom = 212.116
+texture = ExtResource("5_gcb0m")
+
+[node name="Button5" type="Button" parent="Boxop/TextureRect5"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 7.0
+offset_right = 62.0
+offset_bottom = 55.0
+flat = true
+
+[node name="TextureRect6" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = 31.1599
+offset_top = 153.116
+offset_right = 101.16
+offset_bottom = 212.116
+texture = ExtResource("5_gcb0m")
+
+[node name="Button6" type="Button" parent="Boxop/TextureRect6"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 62.0
+offset_bottom = 56.0
+flat = true
+
+[node name="TextureRect7" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = -100.0
+offset_top = 209.588
+offset_right = -30.0
+offset_bottom = 268.588
+texture = ExtResource("5_gcb0m")
+
+[node name="Button7" type="Button" parent="Boxop/TextureRect7"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 5.0
+offset_right = 60.0
+offset_bottom = 56.0
+flat = true
+
+[node name="TextureRect8" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = -34.4196
+offset_top = 209.588
+offset_right = 35.5804
+offset_bottom = 268.588
+texture = ExtResource("5_gcb0m")
+
+[node name="Button8" type="Button" parent="Boxop/TextureRect8"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 7.0
+offset_right = 62.0
+offset_bottom = 55.0
+flat = true
+
+[node name="TextureRect9" type="TextureRect" parent="Boxop"]
+modulate = Color(1, 1, 1, 0.8)
+offset_left = 31.1599
+offset_top = 209.588
+offset_right = 101.16
+offset_bottom = 268.588
+texture = ExtResource("5_gcb0m")
+
+[node name="Button9" type="Button" parent="Boxop/TextureRect9"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 62.0
+offset_bottom = 56.0
+flat = true
+
+[node name="main" parent="." instance=ExtResource("7_446uy")]
+
+[connection signal="pressed" from="Boxop/Openleft/candle/candleBtn" to="." method="_on_candle_btn_pressed"]
+[connection signal="pressed" from="Boxop/Openright/matches/matchesBtn" to="." method="_on_matches_btn_pressed"]
+[connection signal="pressed" from="Boxop/Openright/makeup/makeupBtn" to="." method="_on_makeup_btn_pressed"]

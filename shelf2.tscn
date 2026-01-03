@@ -1,0 +1,168 @@
+[gd_scene load_steps=16 format=3 uid="uid://c804uij3qbs6s"]
+
+[ext_resource type="Script" path="res://shelf2.gd" id="1_0um7f"]
+[ext_resource type="Texture2D" uid="uid://cltm7ogyb5c5e" path="res://livingroom/shelfs/shelfBG.PNG" id="1_w51wm"]
+[ext_resource type="Texture2D" uid="uid://dawnyrp6f3m02" path="res://livingroom/shelfs/shelf2/mortarAndPestle/mortarBack.PNG" id="2_8frnd"]
+[ext_resource type="Texture2D" uid="uid://cmkqcbnl7b2b0" path="res://livingroom/shelfs/shelf2/mortarAndPestle/bluebell.PNG" id="3_ak1ec"]
+[ext_resource type="Texture2D" uid="uid://0luf8b5mfdmx" path="res://livingroom/shelfs/shelf2/blue.PNG" id="4_q4luy"]
+[ext_resource type="Texture2D" uid="uid://crt6l2iq2u877" path="res://livingroom/shelfs/shelf2/mortarAndPestle/sunflower.PNG" id="5_0y3dg"]
+[ext_resource type="Texture2D" uid="uid://dw35g7rmeeum0" path="res://livingroom/shelfs/shelf2/mortarAndPestle/gem.PNG" id="6_oiug1"]
+[ext_resource type="Texture2D" uid="uid://c6vqbinv0g1o5" path="res://livingroom/shelfs/shelf2/mortarAndPestle/pestle.PNG" id="7_germ4"]
+[ext_resource type="Texture2D" uid="uid://b17fu5amrqgiv" path="res://livingroom/shelfs/shelf2/mortarAndPestle/mortar.PNG" id="8_krpsl"]
+[ext_resource type="Texture2D" uid="uid://d0bqh3hfaystt" path="res://livingroom/shelfs/shelf2/bowl.PNG" id="9_6s323"]
+[ext_resource type="Texture2D" uid="uid://jmeu43mwpubw" path="res://livingroom/shelfs/shelf2/egg.PNG" id="10_hw8l1"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="12_wjbpw"]
+
+[sub_resource type="Animation" id="Animation_54sy5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Pestle:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.698132]
+}
+
+[sub_resource type="Animation" id="Animation_ut5st"]
+resource_name = "moveMortar"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Pestle:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1486, 504), Vector2(1395, 304), Vector2(1390, 504), Vector2(1387, 493), Vector2(1390, 424), Vector2(1391.5, 385.5), Vector2(1393, 347), Vector2(1400, 466), Vector2(1406, 526), Vector2(1486, 531)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Pestle:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.698132, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qhp1o"]
+_data = {
+"RESET": SubResource("Animation_54sy5"),
+"moveMortar": SubResource("Animation_ut5st")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0um7f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -27.0
+offset_top = -282.0
+offset_right = 2109.0
+offset_bottom = 1432.0
+texture = ExtResource("1_w51wm")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = -27.0
+offset_top = -282.0
+offset_right = 2109.0
+offset_bottom = 1432.0
+texture = ExtResource("1_w51wm")
+
+[node name="MortarBack" type="Sprite2D" parent="."]
+position = Vector2(1365, 491)
+texture = ExtResource("2_8frnd")
+
+[node name="paste" type="TextureRect" parent="MortarBack"]
+visible = false
+offset_left = -234.0
+offset_top = -3.0
+offset_right = 198.0
+offset_bottom = 138.0
+texture = ExtResource("4_q4luy")
+
+[node name="bluebell" type="TextureRect" parent="MortarBack"]
+visible = false
+offset_left = -1556.0
+offset_top = -24.0
+offset_right = 46.0
+offset_bottom = 157.0
+texture = ExtResource("3_ak1ec")
+
+[node name="sunflower" type="TextureRect" parent="MortarBack"]
+visible = false
+offset_left = -195.0
+offset_top = -16.0
+offset_right = 173.0
+offset_bottom = 207.0
+texture = ExtResource("5_0y3dg")
+
+[node name="gem" type="TextureRect" parent="MortarBack"]
+visible = false
+offset_left = -1593.0
+offset_top = 16.0
+offset_right = 113.0
+offset_bottom = 138.0
+texture = ExtResource("6_oiug1")
+
+[node name="mortaPestle" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1065.0
+offset_top = 375.0
+offset_right = 1663.0
+offset_bottom = 789.0
+
+[node name="Pestle" type="Sprite2D" parent="."]
+position = Vector2(1406, 526)
+rotation = -0.698132
+texture = ExtResource("7_germ4")
+
+[node name="Mortar" type="Sprite2D" parent="."]
+position = Vector2(1355, 603)
+texture = ExtResource("8_krpsl")
+
+[node name="Bowl" type="Sprite2D" parent="."]
+position = Vector2(626, 606)
+texture = ExtResource("9_6s323")
+
+[node name="egg" type="TextureRect" parent="Bowl"]
+visible = false
+offset_left = -204.0
+offset_top = -43.0
+offset_right = 170.0
+offset_bottom = 34.0
+texture = ExtResource("10_hw8l1")
+
+[node name="paste" type="TextureRect" parent="Bowl"]
+offset_left = -204.0
+offset_top = -101.0
+offset_right = 207.0
+offset_bottom = 5.0
+
+[node name="bowl" type="Button" parent="Bowl"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -430.0
+offset_top = -168.0
+offset_right = 427.0
+offset_bottom = 131.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Mortar")
+libraries = {
+"": SubResource("AnimationLibrary_qhp1o")
+}
+
+[node name="main" parent="." instance=ExtResource("12_wjbpw")]
+
+[connection signal="pressed" from="mortaPestle" to="." method="_on_morta_pestle_pressed"]
+[connection signal="pressed" from="Bowl/bowl" to="." method="_on_bowl_pressed"]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=3 uid="uid://biphyomi0yclt"]
+
+[ext_resource type="Script" path="res://couchLivingroom.gd" id="1_7omta"]
+[ext_resource type="Texture2D" uid="uid://co0qmv4dwbglf" path="res://livingroom/couchWallLivingRoom/couchWall.PNG" id="2_j1pxg"]
+[ext_resource type="Texture2D" uid="uid://kcjuie21mr0y" path="res://livingroom/couchWallLivingRoom/meri.PNG" id="3_wfwlf"]
+[ext_resource type="Texture2D" uid="uid://d22i340tvl3bm" path="res://livingroom/couchWallLivingRoom/bon.PNG" id="4_f80ga"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="5_rqypg"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7omta")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_j1pxg")
+
+[node name="Meri" type="Sprite2D" parent="."]
+position = Vector2(675.5, 660.5)
+texture = ExtResource("3_wfwlf")
+
+[node name="Button" type="Button" parent="Meri"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -177.0
+offset_top = -350.0
+offset_right = 150.0
+offset_bottom = 368.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Bon" type="Sprite2D" parent="."]
+position = Vector2(1159.5, 761.5)
+texture = ExtResource("4_f80ga")
+
+[node name="Button" type="Button" parent="Bon"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -455.0
+offset_top = -220.0
+offset_right = 401.0
+offset_bottom = 93.0
+metadata/_edit_use_anchors_ = true
+
+[node name="main" parent="." instance=ExtResource("5_rqypg")]
+
+[connection signal="pressed" from="Meri/Button" to="." method="_on_meri_pressed"]
+[connection signal="pressed" from="Bon/Button" to="." method="_on_bon_pressed"]

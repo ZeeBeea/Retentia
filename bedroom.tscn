@@ -1,0 +1,145 @@
+[gd_scene load_steps=12 format=3 uid="uid://dvj0wx40j2m3q"]
+
+[ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_dwrut"]
+[ext_resource type="Texture2D" uid="uid://cmqteioy2w26m" path="res://backgrounds/tornPainting.png" id="2_hp3c3"]
+[ext_resource type="Texture2D" uid="uid://bcl7r8ulujw5t" path="res://assets/merisit.PNG" id="3_imtoc"]
+[ext_resource type="Texture2D" uid="uid://cv74qkgqkny6r" path="res://assets/merisittalk.PNG" id="4_oefpp"]
+[ext_resource type="Texture2D" uid="uid://djmevebc0br86" path="res://assets/bon.PNG" id="4_u5y03"]
+[ext_resource type="Texture2D" uid="uid://ljv6n64bll0o" path="res://assets/bonBlood.PNG" id="5_4vdl4"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="5_76406"]
+[ext_resource type="Texture2D" uid="uid://cv843delooxgi" path="res://assets/key.PNG" id="6_74ls0"]
+[ext_resource type="Texture2D" uid="uid://cn6b6oojvny57" path="res://assets/bonTalk.PNG" id="7_c5ebb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5d0nx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_imtoc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_imtoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oefpp")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lshqx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4vdl4")
+}],
+"loop": true,
+"name": &"blood",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u5y03")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u5y03")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c5ebb")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 2.0
+}]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dwrut")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_right = 1284.0
+offset_bottom = 722.0
+texture = ExtResource("2_hp3c3")
+
+[node name="cabinet" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1010.0
+offset_top = 209.0
+offset_right = 1442.0
+offset_bottom = 930.0
+
+[node name="curtain" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 226.0
+offset_top = 213.0
+offset_right = 847.0
+offset_bottom = 634.0
+
+[node name="bed2" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_left = 61.0
+offset_top = 758.0
+offset_right = 756.0
+offset_bottom = 894.0
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="meri" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(459, 790)
+sprite_frames = SubResource("SpriteFrames_5d0nx")
+
+[node name="meriBtn" type="Button" parent="meri"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -122.0
+offset_top = -303.0
+offset_right = 128.0
+offset_bottom = 243.0
+metadata/_edit_use_anchors_ = true
+
+[node name="bon" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(1513, 669)
+sprite_frames = SubResource("SpriteFrames_lshqx")
+
+[node name="bonBtn" type="Button" parent="bon"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -137.0
+offset_top = -317.0
+offset_right = 152.0
+offset_bottom = 312.0
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+visible = false
+offset_left = 525.0
+offset_top = 296.0
+offset_right = 571.0
+offset_bottom = 342.0
+texture = ExtResource("6_74ls0")
+
+[node name="key" type="Button" parent="TextureRect2"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 49.0
+offset_bottom = 41.0
+
+[node name="main" parent="." instance=ExtResource("5_76406")]
+
+[connection signal="pressed" from="cabinet" to="." method="_on_cabinet_pressed"]
+[connection signal="pressed" from="curtain" to="." method="_on_curtain_pressed"]
+[connection signal="pressed" from="bed2" to="." method="_on_bed_pressed"]
+[connection signal="pressed" from="meri/meriBtn" to="." method="_on_meri_btn_pressed"]
+[connection signal="pressed" from="bon/bonBtn" to="." method="_on_bon_btn_pressed"]
+[connection signal="pressed" from="TextureRect2/key" to="." method="_on_key_pressed"]

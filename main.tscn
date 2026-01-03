@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfgf2cqi0s3hj"]
+
+[ext_resource type="Script" path="res://scripts/UI.gd" id="1_dxrcw"]
+[ext_resource type="Texture2D" uid="uid://b1h7n2xn3ov5c" path="res://UIFiles/caraDia.png" id="2_r46nr"]
+[ext_resource type="FontFile" uid="uid://p5sc35hddxrq" path="res://UIFiles/FanwoodText-Regular.ttf" id="3_y4ixp"]
+[ext_resource type="Texture2D" uid="uid://xq86itkh0nfe" path="res://assets/pngegg.png" id="4_wur1f"]
+[ext_resource type="PackedScene" uid="uid://cmlrohrapdqv5" path="res://pause.tscn" id="5_dfekf"]
+[ext_resource type="AudioStream" uid="uid://dhr21uf6lttb1" path="res://sounds/old-radio-button-click-97549.mp3" id="6_s7tly"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cv522"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_dxrcw")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1669.0
+offset_top = 56.0
+offset_right = 1868.0
+offset_bottom = 255.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="DialogBox" type="ColorRect" parent="."]
+offset_left = 510.0
+offset_top = 772.0
+offset_right = 1410.0
+offset_bottom = 1023.0
+color = Color(0.376471, 0.411765, 0.25098, 1)
+
+[node name="TextDeco" type="NinePatchRect" parent="DialogBox"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 5.0
+offset_right = 880.0
+offset_bottom = 245.0
+texture = ExtResource("2_r46nr")
+patch_margin_left = 110
+patch_margin_top = 68
+patch_margin_right = 110
+patch_margin_bottom = 68
+
+[node name="Label" type="Label" parent="DialogBox"]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 46.0
+offset_right = 835.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(0.196078, 0.168627, 0.0862745, 1)
+theme_override_fonts/font = ExtResource("3_y4ixp")
+theme_override_font_sizes/font_size = 65
+text = "fadfdafdfa"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="changeSceneButton" type="Button" parent="."]
+visible = false
+offset_left = 1896.0
+offset_top = 490.0
+offset_right = 1996.0
+offset_bottom = 590.0
+rotation = 1.5708
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+icon = ExtResource("4_wur1f")
+expand_icon = true
+
+[node name="changeSceneButton2" type="Button" parent="."]
+visible = false
+offset_left = 40.0
+offset_top = 590.0
+offset_right = 140.0
+offset_bottom = 690.0
+rotation = -1.5708
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+icon = ExtResource("4_wur1f")
+expand_icon = true
+
+[node name="changeSceneButton3" type="Button" parent="."]
+visible = false
+offset_left = 1010.0
+offset_top = 1031.0
+offset_right = 1110.0
+offset_bottom = 1131.0
+rotation = 3.14159
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+icon = ExtResource("4_wur1f")
+expand_icon = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_s7tly")
+
+[node name="Node2D" parent="." instance=ExtResource("5_dfekf")]
+visible = false
+
+[connection signal="pressed" from="changeSceneButton" to="." method="_on_rightBtn_pressed"]
+[connection signal="pressed" from="changeSceneButton2" to="." method="_on_leftBtn_pressed"]
+[connection signal="pressed" from="changeSceneButton3" to="." method="_on_downBtn_pressed"]
+[connection signal="pressed" from="Node2D/ColorRect/continue" to="." method="_on_continue_pressed"]
+
+[editable path="Node2D"]

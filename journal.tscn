@@ -1,0 +1,130 @@
+[gd_scene load_steps=10 format=3 uid="uid://cmh4kvroa1pwt"]
+
+[ext_resource type="Texture2D" uid="uid://skqhydi51rpg" path="res://assets/book/bookBG.PNG" id="1_qfl6p"]
+[ext_resource type="Script" path="res://journal.gd" id="1_xyawc"]
+[ext_resource type="Texture2D" uid="uid://da3ywfni153ct" path="res://assets/book/PAGE1/caraPhoto.PNG" id="2_xcwpm"]
+[ext_resource type="Texture2D" uid="uid://cg2dpfd3aej8q" path="res://assets/book/PAGE1/page1text.PNG" id="3_byfkl"]
+[ext_resource type="Texture2D" uid="uid://dw44pyg86p7cg" path="res://assets/book/page2/meriphoto.PNG" id="4_vqtgr"]
+[ext_resource type="Texture2D" uid="uid://dynl6r1w086bb" path="res://assets/caraPhotoUndressed.PNG" id="5_mg0h4"]
+[ext_resource type="Texture2D" uid="uid://8386fnnk84al" path="res://assets/book/page2/firephoto.PNG" id="5_vb6j6"]
+[ext_resource type="Texture2D" uid="uid://02bscxrdwodx" path="res://assets/book/ArroflipBook.PNG" id="6_hbbvu"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="8_7ur1c"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_xyawc")
+
+[node name="pageBG" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_qfl6p")
+
+[node name="photoCara" type="TextureRect" parent="pageBG"]
+visible = false
+layout_mode = 0
+offset_left = 1096.0
+offset_top = 536.0
+offset_right = 1741.0
+offset_bottom = 1056.0
+texture = ExtResource("2_xcwpm")
+
+[node name="text" type="TextureRect" parent="pageBG"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 10.0
+offset_right = 1904.0
+offset_bottom = 1075.0
+texture = ExtResource("3_byfkl")
+
+[node name="photoCaraUndress" type="TextureRect" parent="pageBG"]
+visible = false
+layout_mode = 0
+offset_left = 1162.0
+offset_top = 536.0
+offset_right = 1698.0
+offset_bottom = 968.0
+texture = ExtResource("5_mg0h4")
+
+[node name="photomeri" type="TextureRect" parent="pageBG"]
+visible = false
+layout_mode = 0
+offset_left = 1270.0
+offset_top = 562.0
+offset_right = 1850.0
+offset_bottom = 1069.0
+texture = ExtResource("4_vqtgr")
+
+[node name="photofire" type="TextureRect" parent="pageBG"]
+visible = false
+layout_mode = 0
+offset_left = 146.0
+offset_top = 62.0
+offset_right = 955.0
+offset_bottom = 531.0
+texture = ExtResource("5_vb6j6")
+
+[node name="caraBtn" type="Button" parent="pageBG"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1154.0
+offset_top = 518.0
+offset_right = 1716.0
+offset_bottom = 986.0
+
+[node name="meriBtn" type="Button" parent="pageBG"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 1270.0
+offset_top = 556.0
+offset_right = 1832.0
+offset_bottom = 1052.0
+
+[node name="firePhoto" type="Button" parent="pageBG"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 142.0
+offset_top = 28.0
+offset_right = 704.0
+offset_bottom = 556.0
+
+[node name="arrowright" type="TextureRect" parent="."]
+offset_left = 1818.0
+offset_top = 996.0
+offset_right = 1917.0
+offset_bottom = 1058.0
+texture = ExtResource("6_hbbvu")
+flip_v = true
+
+[node name="Button" type="Button" parent="arrowright"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -22.0
+offset_right = 108.0
+offset_bottom = 70.0
+
+[node name="arrowleft" type="TextureRect" parent="."]
+visible = false
+offset_left = 20.0
+offset_top = 992.0
+offset_right = 119.0
+offset_bottom = 1054.0
+texture = ExtResource("6_hbbvu")
+flip_h = true
+flip_v = true
+
+[node name="Button2" type="Button" parent="arrowleft"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -8.0
+offset_top = 2.0
+offset_right = 122.0
+offset_bottom = 72.0
+
+[node name="main" parent="." instance=ExtResource("8_7ur1c")]
+
+[connection signal="pressed" from="pageBG/caraBtn" to="." method="_on_cara_btn_pressed"]
+[connection signal="pressed" from="pageBG/meriBtn" to="." method="_on_meri_btn_pressed"]
+[connection signal="pressed" from="pageBG/firePhoto" to="." method="_on_fire_btn_pressed"]
+[connection signal="pressed" from="arrowright/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="arrowleft/Button2" to="." method="_on_button_2_pressed"]

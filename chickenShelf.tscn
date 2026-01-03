@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://re2n2gg8tcyn"]
+
+[ext_resource type="Texture2D" uid="uid://cltm7ogyb5c5e" path="res://livingroom/shelfs/shelfBG.PNG" id="1_5awbk"]
+[ext_resource type="Script" path="res://chickenShelf.gd" id="1_l8of8"]
+[ext_resource type="Texture2D" uid="uid://cyy0xa38tpfku" path="res://livingroom/shelfs/shelf1/chicken.PNG" id="2_4vwmg"]
+[ext_resource type="Texture2D" uid="uid://cxeshp5kk8n28" path="res://livingroom/shelfs/shelf1/nest.PNG" id="3_4soel"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="5_50tfe"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_l8of8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -27.0
+offset_top = -282.0
+offset_right = 2109.0
+offset_bottom = 1432.0
+texture = ExtResource("1_5awbk")
+
+[node name="TextureRect" type="TextureRect" parent="TextureRect"]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 419.0
+offset_right = 1459.0
+offset_bottom = 1036.0
+texture = ExtResource("2_4vwmg")
+
+[node name="Button" type="Button" parent="TextureRect/TextureRect"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 8.0
+offset_right = 1012.0
+offset_bottom = 599.0
+
+[node name="Nest" type="Sprite2D" parent="."]
+position = Vector2(943, 722)
+texture = ExtResource("3_4soel")
+
+[node name="main" parent="." instance=ExtResource("5_50tfe")]
+
+[connection signal="pressed" from="TextureRect/TextureRect/Button" to="." method="_on_chicken_pressed"]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3p4gtef8xvkq"]
+
+[ext_resource type="Texture2D" uid="uid://car8v35jebyqk" path="res://assets/CaraSpeak.PNG" id="1_gls1s"]
+[ext_resource type="Script" path="res://scripts/test.gd" id="2_c5ctm"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_gls1s")
+script = ExtResource("2_c5ctm")

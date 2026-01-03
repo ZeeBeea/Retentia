@@ -1,0 +1,125 @@
+[gd_scene load_steps=8 format=3 uid="uid://bo12dx1x51xc7"]
+
+[ext_resource type="Texture2D" uid="uid://bh7vkjdm18l68" path="res://livingroom/boxInt/boxBg.PNG" id="1_d5w5r"]
+[ext_resource type="Script" path="res://box.gd" id="1_dfudp"]
+[ext_resource type="Texture2D" uid="uid://b5kxopwdoxqv" path="res://livingroom/boxInt/knife.PNG" id="2_tb7p1"]
+[ext_resource type="Texture2D" uid="uid://dpfwjywemcm6a" path="res://livingroom/boxInt/matches.PNG" id="3_qcabm"]
+[ext_resource type="Texture2D" uid="uid://d25kr08066gvs" path="res://livingroom/boxInt/spoon.PNG" id="4_7d25p"]
+[ext_resource type="Texture2D" uid="uid://qgy6pc0a8hok" path="res://livingroom/boxInt/seed/seedGrid.PNG" id="5_dl7tv"]
+[ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="7_a6tyi"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_dfudp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_d5w5r")
+
+[node name="Knife" type="Sprite2D" parent="."]
+position = Vector2(1181, 231)
+texture = ExtResource("2_tb7p1")
+
+[node name="knifebtn" type="Button" parent="Knife"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -519.0
+offset_top = -119.0
+offset_right = 504.0
+offset_bottom = 76.0
+
+[node name="Matches" type="Sprite2D" parent="."]
+position = Vector2(339, 281)
+texture = ExtResource("3_qcabm")
+
+[node name="matchesbtn" type="Button" parent="Matches"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 32.0
+offset_top = -321.0
+offset_right = 359.0
+offset_bottom = 148.0
+rotation = 0.666716
+
+[node name="Spoon" type="Sprite2D" parent="."]
+position = Vector2(451, 577)
+texture = ExtResource("4_7d25p")
+
+[node name="spoonbtn" type="Button" parent="Spoon"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 135.0
+offset_top = -342.0
+offset_right = 302.0
+offset_bottom = 353.0
+rotation = 0.628319
+
+[node name="SeedGrid" type="Sprite2D" parent="."]
+position = Vector2(1192, 662)
+texture = ExtResource("5_dl7tv")
+
+[node name="Button" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -300.0
+offset_top = -241.0
+offset_right = -166.0
+offset_bottom = -140.0
+
+[node name="Button2" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 8.0
+offset_top = -241.0
+offset_right = 163.0
+offset_bottom = -137.0
+
+[node name="Button3" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 195.0
+offset_top = -122.0
+offset_right = 307.0
+offset_bottom = -10.0
+
+[node name="Button4" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 2.0
+offset_top = 134.0
+offset_right = 147.0
+offset_bottom = 237.0
+
+[node name="Button5" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -160.0
+offset_top = 8.0
+offset_right = -15.0
+offset_bottom = 133.0
+
+[node name="Button6" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -154.0
+offset_top = 134.0
+offset_right = -14.0
+offset_bottom = 235.0
+
+[node name="Button7" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -301.0
+offset_top = 11.0
+offset_right = -166.0
+offset_bottom = 130.0
+
+[node name="Button8" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 11.0
+offset_top = -124.0
+offset_right = 159.0
+offset_bottom = -13.0
+
+[node name="Button9" type="Button" parent="SeedGrid"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -297.0
+offset_top = 127.0
+offset_right = -161.0
+offset_bottom = 238.0
+
+[node name="main" parent="." instance=ExtResource("7_a6tyi")]
+
+[connection signal="pressed" from="Knife/knifebtn" to="." method="_on_knifebtn_pressed"]
+[connection signal="pressed" from="Matches/matchesbtn" to="." method="_on_matchesbtn_pressed"]
+[connection signal="pressed" from="Spoon/spoonbtn" to="." method="_on_spoonbtn_pressed"]
