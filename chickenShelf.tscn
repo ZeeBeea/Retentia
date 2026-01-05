@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://re2n2gg8tcyn"]
 
 [ext_resource type="Texture2D" uid="uid://cltm7ogyb5c5e" path="res://livingroom/shelfs/shelfBG.PNG" id="1_5awbk"]
-[ext_resource type="Script" path="res://chickenShelf.gd" id="1_l8of8"]
+[ext_resource type="Script" uid="uid://8s3x8ldwtma3" path="res://scripts/chickenShelf.gd" id="1_l8of8"]
 [ext_resource type="Texture2D" uid="uid://cyy0xa38tpfku" path="res://livingroom/shelfs/shelf1/chicken.PNG" id="2_4vwmg"]
 [ext_resource type="Texture2D" uid="uid://cxeshp5kk8n28" path="res://livingroom/shelfs/shelf1/nest.PNG" id="3_4soel"]
 [ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="5_50tfe"]

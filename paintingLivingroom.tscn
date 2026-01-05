@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://o7ukscdbi7rn"]
 
-[ext_resource type="Script" path="res://paintingLivingroom.gd" id="1_pra2n"]
+[ext_resource type="Script" uid="uid://ujgu7bkmr30j" path="res://scripts/paintingLivingroom.gd" id="1_pra2n"]
 [ext_resource type="Texture2D" uid="uid://b83alxx66vsf3" path="res://livingroom/paintingWall/wall.PNG" id="1_yoabo"]
 [ext_resource type="Texture2D" uid="uid://brh45f6geam38" path="res://livingroom/paintingWall/paintingWallLivingRoom.PNG" id="2_lokt8"]
 [ext_resource type="Texture2D" uid="uid://tvxe8w8dxlj7" path="res://livingroom/paintingWall/painting/Paint Layer 5.PNG" id="3_er884"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bo12dx1x51xc7"]
 
 [ext_resource type="Texture2D" uid="uid://bh7vkjdm18l68" path="res://livingroom/boxInt/boxBg.PNG" id="1_d5w5r"]
-[ext_resource type="Script" path="res://box.gd" id="1_dfudp"]
+[ext_resource type="Script" uid="uid://t7yym2baye2t" path="res://scripts/box.gd" id="1_dfudp"]
 [ext_resource type="Texture2D" uid="uid://b5kxopwdoxqv" path="res://livingroom/boxInt/knife.PNG" id="2_tb7p1"]
 [ext_resource type="Texture2D" uid="uid://dpfwjywemcm6a" path="res://livingroom/boxInt/matches.PNG" id="3_qcabm"]
 [ext_resource type="Texture2D" uid="uid://d25kr08066gvs" path="res://livingroom/boxInt/spoon.PNG" id="4_7d25p"]

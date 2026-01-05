@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://bjx101jx8k5m2"]
 
-[ext_resource type="Script" path="res://scripts/shelf3.gd" id="1_rch07"]
+[ext_resource type="Script" uid="uid://cqcaexgj3vbqx" path="res://scripts/shelf3.gd" id="1_rch07"]
 [ext_resource type="Texture2D" uid="uid://op6l3kpwayyb" path="res://backgrounds/shelf1.png" id="2_7k02n"]
 [ext_resource type="Texture2D" uid="uid://dtr4sfx6brbi7" path="res://assets/shelf3.PNG" id="3_07fqg"]
 [ext_resource type="Texture2D" uid="uid://ds28rtg6kv7a8" path="res://assets/bookonShelf.PNG" id="4_7ylun"]
 [ext_resource type="Texture2D" uid="uid://dwea1tcxmwpgr" path="res://assets/Paint Layer 53.PNG" id="4_yoofk"]
 [ext_resource type="PackedScene" uid="uid://bfgf2cqi0s3hj" path="res://main.tscn" id="5_mfbc1"]
 [ext_resource type="FontFile" uid="uid://p5sc35hddxrq" path="res://UIFiles/FanwoodText-Regular.ttf" id="6_odgf3"]
-[ext_resource type="PackedScene" uid="uid://v4mtgnurrhwf" path="res://demoComplete.tscn" id="8_aqc72"]
+[ext_resource type="PackedScene" uid="uid://v4mtgnurrhwf" path="res://scripts/demoComplete.tscn" id="8_aqc72"]
 [ext_resource type="PackedScene" uid="uid://ctdturmftxxx3" path="res://end.tscn" id="9_1y20r"]
 
 [node name="Node2D" type="Node2D"]

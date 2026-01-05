@@ -128,4 +128,3 @@ func _on_bon_btn_pressed():
 		dia.bonWrite("No sunshine and one manor")
 		await get_tree().create_timer(1.0).timeout
 		$bon.play("blood")
-

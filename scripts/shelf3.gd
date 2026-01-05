@@ -89,4 +89,3 @@ func demoFade(node, musicFade):
 		color = Color8(255, 255, 255, inc)
 		node.modulate = color
 		await get_tree().create_timer(0.01).timeout
-

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dvj0wx40j2m3q"]
 
-[ext_resource type="Script" path="res://scripts/bedroom.gd" id="1_dwrut"]
+[ext_resource type="Script" uid="uid://dhwwondpi4p52" path="res://scripts/bedroom.gd" id="1_dwrut"]
 [ext_resource type="Texture2D" uid="uid://cmqteioy2w26m" path="res://backgrounds/tornPainting.png" id="2_hp3c3"]
 [ext_resource type="Texture2D" uid="uid://bcl7r8ulujw5t" path="res://assets/merisit.PNG" id="3_imtoc"]
 [ext_resource type="Texture2D" uid="uid://cv74qkgqkny6r" path="res://assets/merisittalk.PNG" id="4_oefpp"]

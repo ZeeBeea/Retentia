@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bfgf2cqi0s3hj"]
 
-[ext_resource type="Script" path="res://scripts/UI.gd" id="1_dxrcw"]
+[ext_resource type="Script" uid="uid://bp2jye56caq25" path="res://scripts/UI.gd" id="1_dxrcw"]
 [ext_resource type="Texture2D" uid="uid://b1h7n2xn3ov5c" path="res://UIFiles/caraDia.png" id="2_r46nr"]
 [ext_resource type="FontFile" uid="uid://p5sc35hddxrq" path="res://UIFiles/FanwoodText-Regular.ttf" id="3_y4ixp"]
 [ext_resource type="Texture2D" uid="uid://xq86itkh0nfe" path="res://assets/pngegg.png" id="4_wur1f"]
@@ -66,11 +66,11 @@ offset_top = 490.0
 offset_right = 1996.0
 offset_bottom = 590.0
 rotation = 1.5708
-theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_cv522")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_cv522")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
 icon = ExtResource("4_wur1f")
 expand_icon = true
 
@@ -81,11 +81,11 @@ offset_top = 590.0
 offset_right = 140.0
 offset_bottom = 690.0
 rotation = -1.5708
-theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_cv522")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_cv522")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
 icon = ExtResource("4_wur1f")
 expand_icon = true
 
@@ -96,11 +96,11 @@ offset_top = 1031.0
 offset_right = 1110.0
 offset_bottom = 1131.0
 rotation = 3.14159
-theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_cv522")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_cv522")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_cv522")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_cv522")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cv522")
 icon = ExtResource("4_wur1f")
 expand_icon = true
 

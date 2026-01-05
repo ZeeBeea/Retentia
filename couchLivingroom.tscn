@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://biphyomi0yclt"]
 
-[ext_resource type="Script" path="res://couchLivingroom.gd" id="1_7omta"]
+[ext_resource type="Script" uid="uid://dcged2rttw2ug" path="res://scripts/couchLivingroom.gd" id="1_7omta"]
 [ext_resource type="Texture2D" uid="uid://co0qmv4dwbglf" path="res://livingroom/couchWallLivingRoom/couchWall.PNG" id="2_j1pxg"]
 [ext_resource type="Texture2D" uid="uid://kcjuie21mr0y" path="res://livingroom/couchWallLivingRoom/meri.PNG" id="3_wfwlf"]
 [ext_resource type="Texture2D" uid="uid://d22i340tvl3bm" path="res://livingroom/couchWallLivingRoom/bon.PNG" id="4_f80ga"]

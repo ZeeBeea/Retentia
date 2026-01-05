@@ -22,7 +22,7 @@ config/windows_native_icon="res://UIFiles/retentiaLogo.ico"
 Main="*res://scripts/main.gd"
 UI="*res://main.tscn"
 MusicController="*res://musicController.tscn"
-Settings="res://settings.gd"
+Settings="res://scripts/settings.gd"
 
 [display]
 

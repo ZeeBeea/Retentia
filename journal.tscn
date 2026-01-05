@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cmh4kvroa1pwt"]
 
 [ext_resource type="Texture2D" uid="uid://skqhydi51rpg" path="res://assets/book/bookBG.PNG" id="1_qfl6p"]
-[ext_resource type="Script" path="res://journal.gd" id="1_xyawc"]
+[ext_resource type="Script" uid="uid://clqw6yqrcde0f" path="res://scripts/journal.gd" id="1_xyawc"]
 [ext_resource type="Texture2D" uid="uid://da3ywfni153ct" path="res://assets/book/PAGE1/caraPhoto.PNG" id="2_xcwpm"]
 [ext_resource type="Texture2D" uid="uid://cg2dpfd3aej8q" path="res://assets/book/PAGE1/page1text.PNG" id="3_byfkl"]
 [ext_resource type="Texture2D" uid="uid://dw44pyg86p7cg" path="res://assets/book/page2/meriphoto.PNG" id="4_vqtgr"]

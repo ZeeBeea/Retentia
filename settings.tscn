@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://b0jyxlxa37bg4"]
 
-[ext_resource type="Script" path="res://settings.gd" id="1_4opy3"]
+[ext_resource type="Script" uid="uid://clkaj718kmruo" path="res://scripts/settings.gd" id="1_4opy3"]
 [ext_resource type="Texture2D" uid="uid://dnyo4ld46q2nm" path="res://UIFiles/titlescreen.png" id="1_xctah"]
 [ext_resource type="Texture2D" uid="uid://02bscxrdwodx" path="res://assets/book/ArroflipBook.PNG" id="2_yjugu"]
 [ext_resource type="Texture2D" uid="uid://vtklrld004wx" path="res://UIFiles/grabber.PNG" id="3_8iqim"]

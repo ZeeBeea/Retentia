@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://v4mtgnurrhwf"]
 
 [ext_resource type="FontFile" uid="uid://p5sc35hddxrq" path="res://UIFiles/FanwoodText-Regular.ttf" id="1_4tgy1"]
-[ext_resource type="Script" path="res://demoComplete.gd" id="1_eirxo"]
+[ext_resource type="Script" uid="uid://bqjm36re7w3cx" path="res://scripts/demoComplete.gd" id="1_eirxo"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_eirxo")

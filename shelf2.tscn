@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://c804uij3qbs6s"]
 
-[ext_resource type="Script" path="res://shelf2.gd" id="1_0um7f"]
+[ext_resource type="Script" uid="uid://ct145x1empvin" path="res://scripts/shelf2.gd" id="1_0um7f"]
 [ext_resource type="Texture2D" uid="uid://cltm7ogyb5c5e" path="res://livingroom/shelfs/shelfBG.PNG" id="1_w51wm"]
 [ext_resource type="Texture2D" uid="uid://dawnyrp6f3m02" path="res://livingroom/shelfs/shelf2/mortarAndPestle/mortarBack.PNG" id="2_8frnd"]
 [ext_resource type="Texture2D" uid="uid://cmkqcbnl7b2b0" path="res://livingroom/shelfs/shelf2/mortarAndPestle/bluebell.PNG" id="3_ak1ec"]
@@ -58,8 +58,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qhp1o"]
 _data = {
-"RESET": SubResource("Animation_54sy5"),
-"moveMortar": SubResource("Animation_ut5st")
+&"RESET": SubResource("Animation_54sy5"),
+&"moveMortar": SubResource("Animation_ut5st")
 }
 
 [node name="Node2D" type="Node2D"]
@@ -159,7 +159,7 @@ offset_bottom = 131.0
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Mortar")
 libraries = {
-"": SubResource("AnimationLibrary_qhp1o")
+&"": SubResource("AnimationLibrary_qhp1o")
 }
 
 [node name="main" parent="." instance=ExtResource("12_wjbpw")]

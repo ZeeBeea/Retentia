@@ -171,7 +171,4 @@ func save():
 	save_file.store_var(saveVars)
 	save_file.store_var(invGlobal)
 	save_file.close()
-	get_tree().change_scene_to_file("res://menuStart.tscn")
-
-
-
+	#get_tree().change_scene_to_file("res://menuStart.tscn")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://deix8tkf2nx1w"]
 
 [ext_resource type="Texture2D" uid="uid://b577yjiqeo85w" path="res://livingroom/shelfWall/wall.PNG" id="1_jjlh2"]
-[ext_resource type="Script" path="res://shelfLivingroom.gd" id="1_s5nxc"]
+[ext_resource type="Script" uid="uid://cjvik25pddjj2" path="res://scripts/shelfLivingroom.gd" id="1_s5nxc"]
 [ext_resource type="Texture2D" uid="uid://6rfnamot4js3" path="res://livingroom/shelfWall/shelfBgLivingRoom.PNG" id="2_1iok3"]
 [ext_resource type="Texture2D" uid="uid://dses6wp3tl2wr" path="res://livingroom/shelfWall/shelfOpen.PNG" id="3_axnop"]
 [ext_resource type="Texture2D" uid="uid://do5kn35ly4ufq" path="res://livingroom/shelfWall/chicken.PNG" id="4_3kn48"]
