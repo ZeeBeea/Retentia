@@ -20,6 +20,7 @@ func _on_load_btn_pressed():
 		file.close()
 	else:
 		saves.saveVars = saves.defaults
+		saves.invGlobal.clear()
 		saves.save()
 	get_tree().change_scene_to_file("res://bedroom.tscn")
 
