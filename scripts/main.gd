@@ -51,7 +51,7 @@ var objectDicts = {"knife": "res://inv/Paint Layer 4.PNG",
 	
 	
 var invCurrentGlobal = 0
-var invGlobal = ["sunflower"]
+var invGlobal = []
 
 const globalVolume = "globalVolume"
 const muted = "muted"
