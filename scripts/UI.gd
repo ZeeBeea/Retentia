@@ -66,7 +66,7 @@ func _input(event):
 				invCurrent = invCurrent % inv.size() 
 				if invCurrent < 0:
 					invCurrent = invCurrent + inv.size()
-		if event.pressed && event.keycode == KEY_SPACE:
+		if event.pressed && (event.keycode == KEY_SPACE || event.keycode == KEY_ESCAPE):
 			if $Node2D.visible == false:
 				$Node2D.visible = true
 			elif $Node2D.visible == true:
