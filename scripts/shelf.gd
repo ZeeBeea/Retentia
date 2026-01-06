@@ -33,7 +33,7 @@ func _on_cambtn_pressed():
 	saves.saveVars[saves.cam] = false
 	
 func onBookSorted():
-	if dia.invGlobal.has("journal") :#|| saves.saveVars["bookOnStand"]:
+	if saves.invGlobal.has("journal") :#|| saves.saveVars["bookOnStand"]:
 		pass
 	else:
 		dia.collect(null, "journal")
